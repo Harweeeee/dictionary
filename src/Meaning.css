@@ -1,0 +1,15 @@
+h4 {
+    font-size: 15px;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.definition {
+    font-size: 13px;
+    margin: 0;
+}
+
+.example {
+    font-size: 12px;
+    color: rgb(160, 160, 160);
+}
