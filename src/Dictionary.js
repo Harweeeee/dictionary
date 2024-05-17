@@ -6,6 +6,7 @@ import Results from './Results'
 export default function Dictionary() {
     let [keyword, setKeyword] = useState(null)
     let [results, setResults] = useState(null)
+    let [ready, setReady] = useState(null)
 
     const apiKey = '263tdf1c5f75o8ab465cedabbe0f4604'
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`
@@ -15,7 +16,8 @@ export default function Dictionary() {
     }
 
     function handleResponse(response) {
-        setResults(response.data)
+        setReady(true)
+        setResults(response)
     }
 
     function search(event) {
@@ -23,7 +25,7 @@ export default function Dictionary() {
         axios.get(apiUrl).then(handleResponse)
     }
 
-    if (!results) {
+    if (!ready) {
         return (
             <div className="Dictionary">
                 <div className="defineDictionary">
@@ -53,7 +55,7 @@ export default function Dictionary() {
         )
     } else {
         return (
-            <div className="loadPage">
+            <div className="resultsPage">
                 <form className="searchBox text-center" onSubmit={search}>
                     <input
                         type="search"
