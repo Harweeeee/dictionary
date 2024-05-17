@@ -80,7 +80,7 @@ export default function Dictionary() {
                     <strong>dictionary</strong>{' '}
                 </h1>
 
-                <p className="pNotation">/ˈdɪkʃən(ə)ri/</p>
+                <p className="pNotation">ˈdɪkʃən(ə)ri</p>
 
                 <p className="nounDictionary">
                     a book or electronic resource that lists the words of a
