@@ -1,0 +1,46 @@
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.defineDictionary {
+    max-width: 60%;
+    padding: 150px 40px 50px 150px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.pNotation {
+    font-weight: bold;
+}
+
+.nounDictionary {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+input {
+    width: 70%;
+    border-radius: 30px;
+    padding: 8px 0 8px 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border: 1px solid lightgrey;
+}
+
+input,
+input::placeholder {
+    font-size: 17px;
+}
+
+@media (max-width: 600px) {
+    .defineDictionary {
+        padding: 100px 20px 40px 20px;
+        max-width: none;
+    }
+
+    input,
+    input::placeholder {
+        font-size: 15px;
+    }
+}
