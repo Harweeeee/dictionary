@@ -2,6 +2,17 @@ import React, { useState } from 'react'
 import './Dictionary.css'
 
 export default function Dictionary() {
+    let [keyword, setKeyword] = useState(null)
+
+    function handleKeywordChange(event) {
+        setKeyword(event.target.value)
+    }
+
+    function search(event) {
+        event.preventDefault()
+        alert('Searching...')
+    }
+
     return (
         <div className="Dictionary">
             <div className="defineDictionary">
@@ -19,11 +30,12 @@ export default function Dictionary() {
                     pronunciation, origin, and usage.
                 </p>
             </div>
-            <form className="searchBox text-center">
+            <form className="searchBox text-center" onSubmit={search}>
                 <input
                     type="search"
                     className="inputWord"
                     placeholder="Search the dictionary..."
+                    onChange={handleKeywordChange}
                 ></input>
             </form>
         </div>
