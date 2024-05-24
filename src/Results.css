@@ -1,5 +1,5 @@
 .displayResults {
-    padding: 60px;
+    padding: 60px 0px 0px 80px;
 }
 
 h1 {
@@ -8,6 +8,7 @@ h1 {
 
 .pNotationData {
     font-weight: bold;
+    display: flex;
 }
 
 .errorMessage {
