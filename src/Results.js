@@ -1,6 +1,7 @@
 import React from 'react'
 import Meaning from './Meaning'
 import './Results.css'
+import Images from './Images'
 
 export default function Results(props) {
     if (props.results) {
@@ -18,9 +19,14 @@ export default function Results(props) {
                     <p className="pNotationData">{phonetic}</p>
                 </header>
                 <main>
-                    {meanings.map(function (meaning) {
-                        return <Meaning meaning={meaning} />
-                    })}
+                    <div className="definedInfo">
+                        {meanings.map(function (meaning) {
+                            return <Meaning meaning={meaning} />
+                        })}
+                    </div>
+                    <div className="images">
+                        <Images keyword={word} />
+                    </div>
                 </main>
             </div>
         )
